@@ -1,0 +1,77 @@
+//============================================
+// clearfix
+//============================================
+@mixin clear {
+    *zoom: 1;
+    &:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+//============================================
+// breakpoint
+//============================================
+@mixin breakpoint($point) {
+    @if $point == tablets {
+        @media only screen and (max-width: 1200px) {
+            @content;
+        }
+    } @else if $point == sp {
+        @media only screen and (max-width: 400px) {
+            @content;
+        }
+    } @else if $point == pc {
+        @media only screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+}
+
+// box
+@mixin box($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+//flex box
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-column {
+    @include flex-center;
+    flex-direction: column;
+}
+
+@mixin flex-center-vert {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center-horiz {
+    display: flex;
+    justify-content: center;
+}
+
+// cover background
+@mixin cover-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+//font
+
+@mixin font($name: $mainFonts, $fontweight: normal, $size: 1rem) {
+    font-family: $name, sans-serif;
+    font-weight: $fontweight;
+    font-size: $size;
+}

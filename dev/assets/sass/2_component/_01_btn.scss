@@ -1,0 +1,13 @@
+.c-btn {
+    border: 1px solid #111;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.c-btn--primary {
+    background-color: #000000;
+    border-color: #111;
+    color: #fff;
+}

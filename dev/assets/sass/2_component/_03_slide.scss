@@ -1,0 +1,33 @@
+.c-slide {
+    position: relative;
+    height: 100%;
+    &__title {
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        transform: translateY(-50%);
+        color: white;
+        text-align: right;
+        p {
+            @include font($size: 2.4rem);
+            letter-spacing: 1px;
+        }
+        h3 {
+            @include font($size: 3.6rem);
+            padding: 18px 0px;
+            letter-spacing: 2px;
+        }
+        span {
+            @include font($size: 2.2rem);
+            letter-spacing: 1px;
+        }
+    }
+    &__img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.p-header {
+    background: url("./../img/bg_about@2x.png") no-repeat center/cover;
+    height: 100vh;
+    position: relative;
+    &__slide {
+        height: 100%;
+        .slick-arrow {
+            display: none !important;
+        }
+        .slick-list {
+            height: 100%;
+            .slick-track {
+                height: 100%;
+            }
+        }
+    }
+    .c-nav {
+    }
+    .is-white {
+        color: #fff;
+        .c-nav__logo--white {
+            display: block;
+        }
+        .c-nav__logo--black {
+            display: none;
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        top: 59px;
+        right: 60px;
+        width: 46px;
+    }
+}
