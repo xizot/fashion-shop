@@ -229,12 +229,73 @@ img {
   position: relative;
 }
 
-.p-header__slide {
+.p-header .slide__controller {
+  height: 40px;
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  z-index: 99;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.p-header .slide__controller .slide__num {
+  font-size: 3.2rem;
+  color: white;
   height: 100%;
 }
 
+.p-header .slide__controller .slide__num span {
+  display: none;
+}
+
+.p-header .slide__controller .slide__num .is-current {
+  display: block;
+}
+
+.p-header .slide__controller .slide__border {
+  height: 2px;
+  width: 70px;
+  background-color: white;
+}
+
+.p-header .slide__controller .slick-arrow {
+  width: 15px;
+  cursor: pointer;
+}
+
+.p-header .slide__controller span {
+  padding: 0 20px;
+  color: white;
+  font-size: 3.2rem;
+}
+
+.p-header__slide {
+  height: 100%;
+  position: relative;
+}
+
 .p-header__slide .slick-arrow {
-  display: none !important;
+  position: absolute;
+  bottom: 30px;
+  background-color: transparent;
+  outline: none;
+  width: 15px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.p-header__slide .slick-next {
+  right: 30px;
+}
+
+.p-header__slide .slick-prev {
+  right: 130px;
 }
 
 .p-header__slide .slick-list {

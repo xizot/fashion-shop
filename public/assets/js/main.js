@@ -4,6 +4,8 @@ $(document).ready(() => {
         infinite: true,
         speed: 500,
         fade: true,
+        nextArrow:$('.slide__prev'),
+        prevArrow:$('.slide__next')
    });
 
    $('.p-feature__slide').slick({

@@ -2,10 +2,60 @@
     background: url("./../img/bg_about@2x.png") no-repeat center/cover;
     height: 100vh;
     position: relative;
+    .slide__controller {
+        height: 40px;
+        position: absolute;
+        bottom: 60px;
+        right: 60px;
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        .slide__num {
+            font-size: 3.2rem;
+            color: white;
+            height: 100%;
+            span {
+                display: none;
+            }
+            .is-current {
+                display: block;
+            }
+        }
+        .slide__border {
+            height: 2px;
+            width: 70px;
+            background-color: white;
+        }
+        .slick-arrow {
+            width: 15px;
+            cursor: pointer;
+        }
+        span {
+            padding: 0 20px;
+            color: white;
+            font-size: 3.2rem;
+        }
+    }
     &__slide {
         height: 100%;
+        position: relative;
         .slick-arrow {
-            display: none !important;
+            // display: none !important;
+            position: absolute;
+            bottom: 30px;
+            background-color: transparent;
+            outline: none;
+            width: 15px;
+            z-index: 999;
+            cursor: pointer;
+        }
+        .slick-next {
+            right: 30px;
+        }
+        .slick-prev {
+            right: 130px;
         }
         .slick-list {
             height: 100%;
