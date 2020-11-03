@@ -7,18 +7,31 @@
     background-color: black;
     z-index: 999;
     overflow: hidden;
-    display: none;
+    // display: block;
+    opacity: 0;
     &__line {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        height: 3px;
-        width: 0;
-        background-color: white;
+        width: 50%;
         transition: width 0.4s ease-in;
+        &::before {
+            content: "";
+            height: 2px;
+            background-color: white;
+            display: block;
+            width: 0;
+            transition: width 0.4s ease-in;
+        }
     }
-    .full-width {
-        width: 800px;
+
+    &.is-show {
+        opacity: 1;
+        .loading__line {
+            &::before {
+                width: 100%;
+            }
+        }
     }
 }

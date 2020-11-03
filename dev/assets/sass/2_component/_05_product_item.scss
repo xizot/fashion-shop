@@ -1,0 +1,16 @@
+.c-product__item {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    .c-product__image {
+        img {
+        }
+    }
+    .c-product__text {
+        text-align: center;
+        @include font($size: 2rem);
+    }
+}

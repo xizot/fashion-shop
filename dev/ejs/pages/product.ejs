@@ -1,0 +1,47 @@
+<%
+    products = [
+    {
+        name:'Tent',
+        img:'1@2x.png'
+    },
+    {
+        name:'Tarp',
+        img:'2@2x.png'
+    },
+
+    {
+        name:'Tent/Tarp Accessories',
+        img:'3@2x.png'
+    },
+
+    {
+        name:'Stove',
+        img:'4@2x.png'
+    },
+
+    {
+        name:'Equipment',
+        img:'5@2x.png'
+    },
+
+    {
+        name:'Apparel',
+        img:'6@2x.png'
+    },
+    ]
+%>
+
+<section id="product" class="p-product">
+    <div class="l-container">
+        <h3 class="c-title">Products</h3>
+        <div class="p-product__content row">
+            <% products.forEach(item=>{%>
+                <%- include('../components/productItem.ejs',{
+                    productName: item.name,
+                    productImg: "./assets/img/product/"+item.img,
+                    className:"col-xs-12 col-md-3"
+                })%>
+            <%})%>
+        </div>
+    </div>
+</section>
