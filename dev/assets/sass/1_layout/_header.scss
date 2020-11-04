@@ -16,17 +16,31 @@
             font-size: 3.2rem;
             color: white;
             height: 100%;
+
             span {
-                display: none;
+                transform: translate3d(0, -100%, 0);
             }
             .is-current {
                 display: block;
+                transform: translate3d(0, 100%, 0);
             }
         }
         .slide__border {
-            height: 2px;
+            position: relative;
+            height: 3px;
             width: 70px;
-            background-color: white;
+            background-color: #777;
+            overflow: hidden;
+            span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: white;
+                height: 100%;
+                width: 0;
+                display: block;
+                padding: unset;
+            }
         }
         .slick-arrow {
             width: 15px;
@@ -36,6 +50,15 @@
             padding: 0 20px;
             color: white;
             font-size: 3.2rem;
+        }
+        &.is-move {
+            .slide__border {
+                span {
+                    width: 100% !important;
+                    left: 100%;
+                    transition: left 700ms;
+                }
+            }
         }
     }
     &__slide {
@@ -82,5 +105,13 @@
         top: 59px;
         right: 60px;
         width: 46px;
+    }
+}
+
+@keyframes count {
+    0% {
+    }
+    100% {
+        transform: translateY(-100%);
     }
 }
