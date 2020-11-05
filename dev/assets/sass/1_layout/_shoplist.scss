@@ -1,0 +1,135 @@
+.p-shop {
+    background-color: #e8e8e8;
+    padding-top: 97px;
+    padding-bottom: 100px;
+    .c-title {
+        margin-top: 96px;
+        margin-bottom: 57px;
+    }
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__img {
+        width: 555px;
+        height: 416px;
+        @include breakpoint(sp) {
+            width: 100%;
+        }
+    }
+    &__info {
+        padding-left: 60px;
+        width: calc(100% - 555px);
+        @include breakpoint(sp) {
+            width: 100%;
+        }
+    }
+    &__title {
+        @include font($size: 3.2rem);
+        letter-spacing: 1.28px;
+    }
+    &__detail {
+        @include font($size: 1.6rem);
+        margin-top: 40px;
+        letter-spacing: 0px;
+        line-height: 2;
+        display: block;
+    }
+    &__time {
+        margin-top: 65px;
+        span {
+            display: block;
+            color: #555555;
+            @include font($size: 1.5rem);
+            margin-bottom: 7px;
+        }
+    }
+    &__connect {
+        margin-top: 37px;
+        p {
+            @include font($name: $shuei, $size: 1.5rem);
+            margin-bottom: 15px;
+            position: relative;
+            width: fit-content;
+            img {
+                width: 20px;
+                margin-right: 10px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 35px;
+                bottom: 3px;
+                height: 1px;
+                width: calc(100% - 35px);
+                background-color: #000;
+            }
+        }
+    }
+    &__find {
+        margin-top: 114px;
+        display: flex;
+        .find__title {
+            @include font($size: 3.2rem, $fontweight: bold);
+            letter-spacing: 1.28px;
+        }
+        > ul {
+            margin-left: 176px;
+            margin-top: 8px;
+            min-width: 300px;
+            li {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background-color: black;
+                    bottom: 20px;
+                    left: 0;
+                    opacity: 0;
+                }
+
+                &:hover {
+                    &:after {
+                        opacity: 1;
+                    }
+                    > .dropdown {
+                        display: block !important;
+                    }
+                }
+            }
+            > li {
+                img {
+                    position: absolute;
+                    top: 5px;
+                    right: 14px;
+                }
+
+                a {
+                    width: 100%;
+                    @include font($name: $shuei, $size: 2.2rem);
+                    letter-spacing: 0.44px;
+                    margin-bottom: 18px;
+                }
+                &.have-dropdown {
+                    ul.dropdown {
+                        display: none;
+                        position: absolute;
+                        left: 100%;
+                        top: 0;
+                        min-width: fit-content;
+                        padding-left: 41px;
+                        li {
+                            a {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

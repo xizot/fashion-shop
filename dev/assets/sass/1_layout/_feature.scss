@@ -2,13 +2,13 @@
     min-height: 100vh;
     background-color: #e8e8e8;
     padding-top: 97px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 
     &__slide {
         margin-top: 27px;
         .slide__item {
             &:not(:last-of-type) {
-                margin-right: 30px;
+                margin-right: 40px;
             }
             .slide__img {
                 width: 840px;

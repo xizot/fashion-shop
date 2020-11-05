@@ -4,6 +4,7 @@
     }
     @include breakpoint(pc) {
         padding-left: calc(235px + 80px);
+        padding-right: 80px;
     }
     max-width: 100%;
 }

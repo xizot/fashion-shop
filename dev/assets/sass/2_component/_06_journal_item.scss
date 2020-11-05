@@ -1,0 +1,35 @@
+.c-journal__item {
+    padding: 0 22.5px 45px;
+    .c-journal__image {
+    }
+    .c-journal__title {
+        @include font($size: 1.6rem, $fontweight: bold);
+        letter-spacing: 0.64px;
+        margin-top: 24px;
+    }
+    .c-journal__description {
+        @include font($name: "DNP ShueiGoGinStd", $size: 2rem);
+        letter-spacing: 0.4px;
+        display: block;
+        margin-top: 6px;
+    }
+    .c-journal__bottom {
+        margin-top: 23px;
+        border-top: 1px solid #b9b9b9;
+        padding-top: 15px;
+        a {
+            @include font($size: 1.4rem);
+            letter-spacing: 0.28px;
+            text-decoration: underline;
+        }
+        span {
+            @include font($size: 1.2rem);
+            letter-spacing: 0.48px;
+        }
+        .c-journal__cat {
+            margin-right: 29px;
+        }
+        .c-journal__date {
+        }
+    }
+}

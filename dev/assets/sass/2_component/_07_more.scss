@@ -1,0 +1,16 @@
+.c-more {
+    box-sizing: border-box;
+    position: relative;
+    height: 58px;
+    line-height: 58px;
+    &__text {
+        @include font($size: 1.8rem);
+        letter-spacing: 0.72;
+    }
+    &__icon {
+        position: absolute;
+        right: 23px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

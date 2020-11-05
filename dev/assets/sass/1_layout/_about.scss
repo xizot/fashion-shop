@@ -1,0 +1,49 @@
+.p-about {
+    padding-top: 98px;
+    padding-bottom: 100px;
+    color: white;
+    .bg-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+    }
+    .p-about__logo {
+        margin-top: 107px;
+        width: 283px;
+    }
+
+    img {
+    }
+    p {
+        @include font($name: $shuei, $size: 1.8rem);
+        letter-spacing: 0.36px;
+        line-height: 2.35;
+        margin-top: 88px;
+    }
+    h4 {
+        @include font($size: 3.5rem, $fontweight: bold);
+        letter-spacing: 2.8px;
+        margin-top: 45px;
+    }
+
+    span {
+        @include font($size: 2.3rem);
+        letter-spacing: 0.46px;
+        display: block;
+        margin-top: 99px;
+        position: relative;
+        width: fit-content;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            bottom: -2px;
+            left: 0;
+        }
+    }
+}

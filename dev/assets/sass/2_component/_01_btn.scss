@@ -5,9 +5,45 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
+    transition: all 0.6s;
+
+    .icon-black {
+        display: block;
+    }
+    .icon-white {
+        display: none;
+    }
+    &:hover {
+        background-color: #000000;
+        border-color: #111;
+        color: #fff;
+        .icon-black {
+            display: none;
+        }
+        .icon-white {
+            display: block;
+        }
+    }
 }
 .c-btn--primary {
     background-color: #000000;
     border-color: #111;
     color: #fff;
+    transition: all 0.6s;
+    .icon-black {
+        display: none;
+    }
+    .icon-white {
+        display: block;
+    }
+    &:hover {
+        background-color: #fff;
+        color: #111;
+        .icon-black {
+            display: block;
+        }
+        .icon-white {
+            display: none;
+        }
+    }
 }

@@ -39,9 +39,16 @@
                 <%- include('../components/productItem.ejs',{
                     productName: item.name,
                     productImg: "./assets/img/product/"+item.img,
-                    className:"col-xs-12 col-md-3"
+                    className:"col-xs-12 col-md-4"
                 })%>
             <%})%>
+        </div>
+        <div class="p-product__more c-more">
+            <a href="#" class="c-btn ">
+               <span class="c-more__text">View All Products</span>
+                <img class="c-more__icon icon-black" src="./assets/img/icons/arrow-right.png" alt="">
+                <img class="c-more__icon icon-white" src="./assets/img/icons/arrow-right-white.png" alt="">
+            </a>
         </div>
     </div>
 </section>

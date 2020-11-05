@@ -12,12 +12,6 @@
     justify-content: space-between;
     border-right: 1px solid #fff;
 
-    li {
-        display: block;
-        &:not(:last-of-type) {
-            margin-bottom: 10px;
-        }
-    }
     &__logo {
         width: 140px;
         height: auto;
@@ -28,9 +22,16 @@
         }
     }
     &__navigation {
+        margin-top: -1px;
+        li {
+            display: block;
+            &:not(:last-of-type) {
+                margin-bottom: 11px;
+            }
+        }
         a {
             @include font($size: 1.8rem);
-            letter-spacing: 0.7px;
+            letter-spacing: 0.72px;
             padding: 0 5px;
             &:hover {
                 background-color: #707070;
@@ -39,8 +40,14 @@
         }
     }
     &__actions {
+        li {
+            display: block;
+            &:not(:last-of-type) {
+                margin-bottom: 9px;
+            }
+        }
         a {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             letter-spacing: 0.7px;
             padding: 0 5px;
             &:hover {

@@ -1,0 +1,60 @@
+<%
+    journal = [
+        {
+            title:'For the new traveler Vol.01',
+            img:"img1@2x.png",
+            description:'立山、はじまりの山へ',
+            cat: 'Travel',
+            date: '2020.02.28 up'
+        },
+        {
+            title:'Product Note Vol.01',
+            img:"img2@2x.png",
+            description:'人工衛星から名付けられた渾身の焚き火台 ',
+         
+            cat: 'Product Story ',
+            date: '2020.02.28 up'
+        },
+        {
+            title:'For the new traveler Vol.01',
+            img:"img3@2x.png",
+            description:'立山、はじまりの山へ',
+        
+            cat: 'Travel',
+            date: '2020.02.28 up'
+        },
+        {
+            title:'Product Note Vol.01',
+            img:"img4@2x.png",
+            description:'人工衛星から名付けられた渾身の焚き火台',
+            cat: 'Travel',
+            date: '2020.02.28 up'
+        },
+    ]
+%>
+
+
+<section class="p-journal" id="journal">
+    <div class="l-container">
+        <h3 class="c-title">Journal</h3>
+        <div class="p-journal__content row">
+            <% journal.forEach(item=>{%>
+                <%- include('../components/journalItem.ejs',{
+                    title: item.title,
+                    description: item.description,
+                    cat:item.cat,
+                    date:item.date,
+                    className:"col-xs-12 col-md-6",
+                    img:item.img
+                })%>
+            <%})%>
+        </div>
+        <div class="p-journal__more c-more">
+            <a href="#" class="c-btn c-btn--primary">
+               <span class="c-more__text">More</span>
+                <img class="c-more__icon icon-black" src="./assets/img/icons/arrow-right.png" alt="">
+                <img class="c-more__icon icon-white" src="./assets/img/icons/arrow-right-white.png" alt="">
+            </a>
+        </div>
+    </div>
+</section>
